@@ -58,9 +58,9 @@ app.all('/api/*', (req, res, next) => {
 // Global error middleware
 app.use(errorController.error)
 
-const port = process.env.PORT
+const port = process.env.PORT || 5000
 
 // Listen the server
-app.listen(port, port => {
+app.listen(port, () => {
     console.log(`App running on ${port}`)
 })
